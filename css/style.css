@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 :root {
   /* ---------------------------------- colors --------------------------------- */
   --Orange: hsl(25, 97%, 53%);
   --White: hsl(0, 0%, 100%);
   --Light-Grey: hsl(217, 12%, 63%);
-  --Medium-Grey: hsl(216, 12%, 54%);
+  --Medium-Grey: hsl(216, 12%, 20%);
   --Dark-Blue: hsl(213, 19%, 18%);
   --Very-Dark-Blue: hsl(216, 12%, 8%);
 
   /* ---------------------------------- Font ---------------------------------- */
-  --font: 'Overpass', sans-serif;
+  --font: "Overpass", sans-serif;
 }
 
 * {
@@ -21,46 +21,131 @@
 html {
   font-size: 62.5%;
 }
+body {
+  background-color: var(--Very-Dark-Blue);
+  font-family: var(--font);
+  font-size: 1.5rem;
+}
 
+/* ------------------------------ Rating state ------------------------------ */
 
+/* -------------------------------------------------------------------------- */
+/*                              Ratin state start                             */
+/* -------------------------------------------------------------------------- */
 
+.rating-sate-start, .rating-state-end {
+  width: 329px;
+  height: 357px;
+  margin: 150px auto;
+  background-color: var(--Dark-Blue);
+  border-radius: 20px;
+  padding: 2.4rem;
+  
+}
+.ratin-state__start__icon, .rating-state-start__calification__value  {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--Medium-Grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  border: none;
+  color: var(--Light-Grey);
+  font-weight: 700;
+  
+}
+.rating-state-start__title, .rating-state-end__title  {
+  color: var(--White);
+  margin: 2.4rem 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.rating-state-start__parragraf, .rating-state-end__content {
+  color: var(--Light-Grey);
+  font-weight: 400;
+  letter-spacing: -.5px;
+  margin-bottom: 24px;
+  
+}
+.rating-state-start__calification {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  
+  
+}
+ 
 
-.reating-component {
+.rating-state-start__calification__value:hover{
+  background-color: var(--Orange);
+  cursor: pointer;
+  color: var(--White);
+  
+
 }
-.rating-sate-start {
-}
-.ratin-state__start__icon {
-}
-.rating-state-start__title {
-}
-.rating-state-start__parragraf {
-}
-.rating-state-start__calification-start {
-}
-.rating-state-start__calification__value {
+.rating-state-start__calification__value:focus{
+  background-color: var(--Light-Grey);
+  cursor: pointer;
+  color: var(--White);
+  
+
 }
 .rating-state-start__button {
+  width: 100%;
+  height: 45px;
+  border-radius: 20px;
+  background-color: var(--Orange);
+  border: none;
+  margin-bottom: 30px;
+  color: var(--White);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: .4rem;
 }
+
+.rating-state-start__button:hover{
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Rating state end                              */
+/* -------------------------------------------------------------------------- */
+
+
 .rating-state-end {
-}
-.rating-sate-end {
-}
-.rating-sate-end__result {
-}
-.rating-sate-end__result--select-value {
-}
-.rating-sate-end__title {
-}
-.rating-sate-end__content {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
+.rating-state-end__result-img{
+  width: 150px;
+  height: auto;
+  padding-block: 0.8rem 2.4rem;
+
+}
+
+.rating-state-end__result {
+  background-color: var(--Medium-Grey);
+  padding: 1rem;
+  border-radius: 20px;
+  color: var(--Orange);
+  padding: 0.5rem 1rem;
+  
+  
+}
+.rating-state-end__result--select-value {
+}
 
 
-
-
-
-
-
+.rating-state-end__content {
+  text-align: center;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                   Footer                                   */
@@ -72,4 +157,23 @@ html {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Desktop Mode                                */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width:768px){
+
+  .rating-state-start, .rating-state-end{
+    width: 373px;
+    height: 376px;
+    padding: 2.8rem;
+  }
+  .rating-state-start__title, .rating-state-end__title {
+    font-size: 2rem;
+  }
+
 }
